@@ -1,0 +1,593 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-image: url(img/taskList.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* opacity:0.3; */
+    /* filter: contrast(50%); */
+}
+#form-btn>#btn-icon{
+    width: 2rem;
+    height: 2rem;
+    
+}
+
+
+
+ul{
+    display: flex;
+    overflow: scroll;
+}
+
+li{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid red;
+    border-radius: 1rem;
+}
+.decoracionLi{
+    text-decoration: line-through;
+    background-color: aqua;
+}
+.correct{
+    outline:1px solid green;
+}
+.incorrect{
+    outline: 1px solid red;
+}
+
+.info {
+    display: none;
+}
+.info-añadir{
+    display: none;
+} 
+.show-info {
+    display: block;
+}
+.show-info-añadir{
+    display: block;
+    transition: cubic-bezier(1, 0, 0, 1);
+    width:50%;
+    background-color: green;
+    color: #fff;
+    font-size: 0.75rem;
+    border: 1px solid wheat;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition:  all 0.5s  ease-in;
+    
+}
+.delete-btn > .delete-icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}.delete-btn:hover{
+    background-color: red;
+}
+  
+.edit-btn > .edit-icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    
+}
+.edit-btn:hover{
+    background-color: green;
+}
+#form-btn>#btn-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    
+}
+.listo{
+    background-color: blue;
+}
+  .show-btn{
+    background-color: blue;
+}
+/*.container-btn1{
+    background-color: green;
+    border-radius: 1rem;
+    font-size: 1rem;
+    width: 50%;
+    padding: 1rem;
+
+}*/
+.container-btn2{
+    background-color: blue;
+    border-radius: 1rem;
+    font-size: 1rem;
+    width: 50%;
+    padding: 1rem;
+
+}
+.container-btn3{
+    background-color: red;
+    border-radius: 0.5rem;
+    width: 50%;
+    padding: 1rem;
+
+}
+
+@media(min-width:320px){
+    h1{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 1rem;
+    }
+    #btn-icon{
+        color: white;
+    }
+    #form-btn>#btn-icon{
+        width: 2rem;
+        height: 2rem;
+        
+        
+    }
+    
+    #form-btn{
+        border-radius: 0.5rem;
+        
+    }
+    
+    .info{
+        font-size: 0.75rem;
+        border: 1px solid wheat;
+        background-color: #46468b;
+    }
+    
+    div {
+        display: flex;
+        justify-content: center;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        min-height: 5rem;
+        max-height: 20rem;
+        overflow: scroll;
+        margin: 1rem;
+        
+        
+    }
+    li{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between; 
+       gap: 1rem;
+       background-color: #46468b; 
+    }
+    
+    p{
+        /* font-size: 0.75rem; */
+        text-align: justify;
+        padding: 5px 5px;
+        width: 100%;
+        word-break:break-all;
+        color: white;
+    }
+    #form{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+    input{
+        width: 70%;
+        background-color: beige;
+    }
+    .edit-btn{
+        border-radius: 0.5rem;
+        background-color: green;
+
+    }
+    .edit-icon,.delete-icon{
+        color: white;
+    }
+    .delete-btn{
+        border-radius: 0.5rem;
+        background-color: red;
+    }
+    #form-btn>#btn-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        cursor: pointer;
+        
+    }
+    .container{
+        display: flex;
+        /* justify-content: center; */
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        
+        
+    }
+    .Show-container-btn1{
+        border: 1px solid rgb(9, 241, 60);
+        border-radius: 1rem;
+        width: 10rem;
+        font-size: 1rem;
+        overflow:clip ;
+        background-color: rgb(9, 241, 60);
+        color: white;
+    }
+    .Show-container-btn2{
+        border: 1px solid rgb(4, 0, 255);
+        border-radius: 1rem;
+        width: 10rem;
+        font-size: 1rem;
+        background-color:rgb(4, 0, 255) ;
+        color: white;
+        overflow:clip ;
+    }
+    .Show-container-btn3{
+        border: 1px solid red;
+        border-radius: 1rem;
+        width: 10rem;
+        font-size: 1rem;
+        background-color: red;
+        color: white;
+        overflow:clip ;
+    }
+    .show-btn{
+        background-color: blue;
+        
+    }
+}
+@media(min-width:375px){
+    input {
+        width: 80%;
+        background-color: beige;
+        height: 1.5rem;
+        font-size: 1rem;
+    }
+
+    #form-btn>#btn-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        cursor: pointer;
+        
+    }
+    .delete-btn > .delete-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .edit-btn > .edit-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .Show-container-btn1 {
+        
+        width: 10rem;
+        font-size: 1rem;
+        overflow:clip ;
+    }
+    .Show-container-btn2 {
+        
+        width: 10rem;
+        font-size: 1rem;
+        overflow:clip ;
+        
+    }
+    .Show-container-btn3 {
+        
+        width: 10rem;
+        font-size: 1rem;
+        overflow:clip ;
+        
+    }
+}
+
+
+ @media(min-width:425px){
+   
+
+    
+    #form-btn>#btn-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+    p {
+        
+        text-align: justify;
+        padding: 5px 5px;
+        width: 100%;
+        word-break:break-all;
+        color: white;
+        font-size: 1.2rem;
+    }
+}
+
+@media(min-width:768px){
+    h1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 1rem;
+        font-size: 3rem;
+    }
+    #form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+    input {
+        width: 90%;
+        background-color: beige;
+        height: 2rem;
+        font-size: 1.2rem;
+    }
+    #form-btn>#btn-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+        min-height: 5rem;
+        max-height: 30rem;
+        overflow-y: scroll;
+        margin: 1rem;
+    }
+    .container {
+        display: flex;
+        flex-direction:row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 50%;
+        padding-left: 25%;
+    }
+    .Show-container-btn1 {
+        
+        width: 15rem;
+        font-size: 1rem;
+        overflow-x: clip;
+        
+    }
+    .Show-container-btn2 {
+        
+        width: 23rem;
+        font-size: 1rem;
+        overflow-x: clip;
+        
+    }
+    .Show-container-btn3 {
+        
+        width: 23rem;
+        font-size: 1rem;
+        overflow-x: clip;
+        
+    }
+}
+
+@media(min-width:1024px){
+    h1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 1rem;
+        font-size: 4rem;
+    }
+    #form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem;
+        padding: 0.5rem;
+        width: 50%;
+        padding-left: 25%;
+        gap: 1rem;
+    }
+    input {
+        width: 90%;
+        background-color: beige;
+        height: 2rem;
+        font-size: 1.2rem;
+        border-radius: 1rem;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        min-height: 5rem;
+        max-height: 30rem;
+        overflow-y: scroll;
+        margin: 1rem;
+        width: 50%;
+        margin-left: 25%;
+    }
+    .container {
+        display: flex;
+        flex-direction:row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 50%;
+        padding-left: 25%;
+    }
+    .Show-container-btn1 {
+        
+        width: 12rem;
+        font-size: 1rem;
+        overflow:clip ;
+    }
+    .Show-container-btn2 {
+        
+        width: 15rem;
+        font-size: 1rem;
+        overflow:clip ;
+    }
+    .Show-container-btn3 {
+        
+        width: 18rem;
+        font-size: 1rem;
+        overflow:clip ;
+    }
+
+}
+
+@media(min-width:1440px){
+    h1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 1rem;
+        font-size: 5rem;
+    }
+    form#form {
+        width: 100%; 
+        padding-left: 0;
+        justify-content: center;
+        gap:1rem;
+    }
+    input {
+        width: 50%;
+        background-color: beige;
+        height: 3rem;
+        font-size: 1.2rem;
+        border-radius: 1rem;
+    }
+    #form-btn>#btn-icon {
+        width: 4rem;
+        height: 4rem;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        min-height: 5rem;
+        max-height: 30rem;
+        overflow-y: scroll;
+        margin: 1rem;
+        width: 60%;
+        margin-left: 20%;
+    }
+    .delete-btn > .delete-icon {
+        width: 4rem;
+        height: 4rem;
+    }
+    .edit-btn > .edit-icon {
+        width: 4rem;
+        height: 4rem;
+    }
+    p {
+        text-align: justify;
+        padding: 5px 5px;
+        width: 100%;
+        word-break:break-all;
+        color: white;
+        font-size: 1.8rem;
+    }
+    .info {
+        font-size: 1rem;
+        border: 1px solid wheat;
+        background-color: #46468b;
+    }
+    .Show-container-btn1 {
+        
+        width: 20rem;
+        font-size: 1rem;
+        overflow:clip ;
+    }
+    .Show-container-btn2 {
+        
+        width: 20rem;
+        font-size: 1rem;
+        overflow:clip ;
+    }
+    .Show-container-btn3 {
+        
+        width: 20rem;
+        font-size: 1rem;
+        overflow:clip ;
+    }
+}
+@media(min-width:2560px){
+    h1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 2rem;
+        padding-top: 2rem;
+        font-size: 7rem;
+    }
+    input {
+        width: 50%;
+        background-color: beige;
+        height: 5rem;
+        font-size: 1.8rem;
+        border-radius: 1rem;
+    }
+    .info {
+        font-size: 2rem;
+        border: 1px solid wheat;
+        background-color: #46468b;
+    }
+    #form-btn>#btn-icon {
+        width: 6rem;
+        height:6rem;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        min-height: 5rem;
+        max-height: 60rem;
+        overflow-y: scroll;
+        margin: 1rem;
+        width: 74%;
+        margin-left: 10%;
+    }
+    .delete-btn > .delete-icon {
+        width: 6rem;
+        height: 6rem;
+    }
+    .edit-btn > .edit-icon {
+        width: 6rem;
+        height: 6rem;
+    }
+    p {
+        text-align: justify;
+        padding: 5px 5px;
+        width: 100%;
+        word-break:break-all;
+        color: white;
+        font-size: 3rem;
+    }
+    .Show-container-btn1 {
+        
+        width: 35rem;
+        font-size: 1rem;
+        overflow:clip ;
+    }
+    .Show-container-btn2 {
+        
+        width: 35rem;
+        font-size: 1rem;
+        overflow:clip ;
+    }
+    .Show-container-btn3 {
+        
+        width: 35rem;
+        font-size: 1rem;
+        overflow:clip ;
+    }
+}  
