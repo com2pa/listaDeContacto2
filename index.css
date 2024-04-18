@@ -344,8 +344,8 @@ li{
         display: flex;
         flex-direction: column;
         min-height: 5rem;
-        max-height: 30rem;
-        overflow-y: scroll;
+        max-height: 25rem;
+        overflow-x: auto;
         margin: 1rem;
     }
     .container {
@@ -410,8 +410,8 @@ li{
         display: flex;
         flex-direction: column;
         min-height: 5rem;
-        max-height: 30rem;
-        overflow-y: scroll;
+        max-height: 25rem;
+        overflow-x: auto;
         margin: 1rem;
         width: 50%;
         margin-left: 25%;
